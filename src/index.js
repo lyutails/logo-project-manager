@@ -82,12 +82,13 @@ logoContainer.appendChild(canvasApply);
     const near = 0.1;
     const far = 100;
     const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    camera.position.set(0, 10, 10);
+    camera.position.set(0, 10, 12);
 
     const controls = new OrbitControls(camera, canvas);
     controls.target.set(0, 0.2, 0);
     controls.update();
     controls.enableZoom = false;
+    controls.enablePan = false;
 
     const scene = new THREE.Scene();
 
@@ -137,10 +138,8 @@ logoContainer.appendChild(canvasApply);
             loadedModel = gltf;
             scene.add(gltf.scene);
             loadedModel.scene.rotation.y = Math.PI / 5;
-            loadedModel.scene.position.y = -1.4;
-            loadedModel.scene.scale.set(6, 6, 6);
-            loadedModel.scene.translateX(0.4);
-            loadedModel.scene.translateY(-0.55);
+            loadedModel.scene.position.y = -2;
+            loadedModel.scene.scale.set(7, 7, 7);            
         },
         function(xhr) {
             console.log((xhr.loaded / xhr.total * 100) + '%loaded');
@@ -152,11 +151,7 @@ logoContainer.appendChild(canvasApply);
 
     const anim = () => {
         if (loadedModel) {
-            const scalar = 1;            
-            loadedModel.scene.scale.set(7.5, 7.5, 7.5);
-            //loadedModel.scene.rotation.x += 0.01;
             loadedModel.scene.rotation.y += 0.014;
-            //loadedModel.scene.rotation.z += 0.01;
         }
         requestAnimationFrame(anim);
     };
