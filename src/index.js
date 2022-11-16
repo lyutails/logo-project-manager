@@ -87,6 +87,7 @@ logoContainer.appendChild(canvasApply);
     const controls = new OrbitControls(camera, canvas);
     controls.target.set(0, 0.2, 0);
     controls.update();
+    controls.enableZoom = false;
 
     const scene = new THREE.Scene();
 
