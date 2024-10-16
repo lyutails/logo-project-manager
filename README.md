@@ -1,4 +1,4 @@
-# logo for project manager
+# logo project manager
 
 created for [1LisaW](https://github.com/1LisaW) [Kate4ka007](https://github.com/Kate4ka007) [laluna93](https://github.com/laluna93) RSSchool Angular course final project</br>
 https://pomakom-rsteam.github.io/project-management-app-team2/
